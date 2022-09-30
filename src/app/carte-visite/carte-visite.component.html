@@ -1,3 +1,15 @@
-<div class="grid grid-cols-2">
-    <app-carte></app-carte>
+<div class="grid grid-cols-1 w-[100vh]">
+  <app-carte></app-carte>
+  <div class="flex flex-col">
+    <div
+      class="w-full shadow-md rounded p-5 flex flex-row justify-start gap-5 items-center cursor-pointer bg-white mt-10 max-w-[300px] transition-all hover:shadow-xl"
+      (click)="onClick()"
+    >
+      <hero-icon [name]="'pencil'" class="w-5 h-5 text-black"></hero-icon>
+      <p>Edit</p>
+    </div>
+    <div [ngClass]="{'w-full bg-white mt-10 rounded shadow-md max-h-[0px] p-10 transition-all overflow-hidden':true,'!max-h-[1000px] p-10':clicked}">
+        <app-form></app-form>
+    </div>
+  </div>
 </div>

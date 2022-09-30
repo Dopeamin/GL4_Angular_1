@@ -5,9 +5,10 @@ import { allIcons, HeroIconModule } from 'ng-heroicon';
 import { AppComponent } from './app.component';
 import { CarteVisiteComponent } from './carte-visite/carte-visite.component';
 import { CarteComponent } from './carte-visite/carte/carte.component';
+import { FormComponent } from './carte-visite/form/form.component';
 
 @NgModule({
-  declarations: [AppComponent, CarteVisiteComponent, CarteComponent],
+  declarations: [AppComponent, CarteVisiteComponent, CarteComponent, FormComponent],
   imports: [
     BrowserModule,
     HeroIconModule.forRoot(
