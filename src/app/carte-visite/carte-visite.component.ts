@@ -1,4 +1,10 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { Carte } from './carte/carte.model';
 
 @Component({
@@ -8,7 +14,7 @@ import { Carte } from './carte/carte.model';
 })
 export class CarteVisiteComponent implements OnInit, OnChanges {
   public clicked: boolean;
-  public carte: Carte;
+  @Input() carte: Carte;
   constructor() {
     this.clicked = false;
     this.carte = {

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CarteVisiteComponent } from './carte-visite/carte-visite.component';
 import { CarteComponent } from './carte-visite/carte/carte.component';
 import { FormComponent } from './carte-visite/form/form.component';
+import { CvListComponent } from './cv-list/cv-list.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormComponent } from './carte-visite/form/form.component';
     CarteVisiteComponent,
     CarteComponent,
     FormComponent,
+    CvListComponent,
   ],
   imports: [
     BrowserModule,
