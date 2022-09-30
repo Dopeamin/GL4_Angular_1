@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Carte } from './carte.model';
 
 @Component({
   selector: 'app-carte',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carte.component.css'],
 })
 export class CarteComponent implements OnInit {
+  @Input() carte?: Carte;
+
   public hovered: boolean;
+  
   constructor() {
     this.hovered = false;
   }

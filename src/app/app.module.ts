@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { allIcons, HeroIconModule } from 'ng-heroicon';
 
@@ -8,7 +9,12 @@ import { CarteComponent } from './carte-visite/carte/carte.component';
 import { FormComponent } from './carte-visite/form/form.component';
 
 @NgModule({
-  declarations: [AppComponent, CarteVisiteComponent, CarteComponent, FormComponent],
+  declarations: [
+    AppComponent,
+    CarteVisiteComponent,
+    CarteComponent,
+    FormComponent,
+  ],
   imports: [
     BrowserModule,
     HeroIconModule.forRoot(
@@ -20,6 +26,7 @@ import { FormComponent } from './carte-visite/form/form.component';
         attachDefaultDimensionsIfNoneFound: true, // default 'false'
       }
     ),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
