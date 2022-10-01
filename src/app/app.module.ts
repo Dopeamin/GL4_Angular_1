@@ -9,6 +9,7 @@ import { CarteComponent } from './carte-visite/carte/carte.component';
 import { FormComponent } from './carte-visite/form/form.component';
 import { CvListComponent } from './cv-list/cv-list.component';
 import { CvComponent } from './cv/cv.component';
+import { ElementComponent } from './cv-list/element/element.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CvComponent } from './cv/cv.component';
     FormComponent,
     CvListComponent,
     CvComponent,
+    ElementComponent,
   ],
   imports: [
     BrowserModule,

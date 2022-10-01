@@ -1,0 +1,15 @@
+<div
+  [ngClass]="{
+    'w-fit h-fit shadow-md rounded p-5 flex flex-row justify-start gap-5 items-center cursor-pointer bg-white max-w-[300px] transition-all hover:shadow-xl': true,
+    '!shadow-blue-200': selected
+  }"
+  (click)="onSelect()"
+>
+  <div class="relative rounded-full w-10 h-10 bg-white shadow overflow-hidden">
+    <img
+      [src]="'assets/' + data!.image"
+      class="contain w-full h-full shadow-lg"
+    />
+  </div>
+  <p>{{ data!.nom }} {{ data!.prenom }}</p>
+</div>
