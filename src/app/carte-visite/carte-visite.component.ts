@@ -12,7 +12,7 @@ import { Carte } from './carte/carte.model';
   templateUrl: './carte-visite.component.html',
   styleUrls: ['./carte-visite.component.css'],
 })
-export class CarteVisiteComponent implements OnInit, OnChanges {
+export class CarteVisiteComponent implements OnInit {
   public clicked: boolean;
   @Input() carte: Carte;
   constructor() {
@@ -37,9 +37,5 @@ export class CarteVisiteComponent implements OnInit, OnChanges {
 
   onClickEvent(color: string) {
     this.carte.couleur = color;
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.carte);
   }
 }

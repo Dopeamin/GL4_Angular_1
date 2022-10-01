@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Carte } from '../carte-visite/carte/carte.model';
 
 @Component({
@@ -7,38 +7,14 @@ import { Carte } from '../carte-visite/carte/carte.model';
   styleUrls: ['./cv-list.component.css'],
 })
 export class CvListComponent implements OnInit {
-  public cartes: Carte[];
-  public select?: number;
-  constructor() {
-    this.cartes = [
-      {
-        nom: 'Hamdouni',
-        prenom: 'Mohamed Amine',
-        job: 'Software Engineer',
-        image: 'amine.jpg',
-        citation: 'What doesnt kill you makes you stronger',
-        description: 'I build web applications for fun',
-        keys: 'HTML CSS JS REACT ANGULAR PHP',
-        couleur: '#5fa5fa',
-      },
-      {
-        nom: 'Hamdouni',
-        prenom: 'Mohamed Amine 2',
-        job: 'Software Engineer',
-        image: 'john-doe.png',
-        citation: 'What doesnt kill you makes you stronger',
-        description: 'I build web applications for fun',
-        keys: 'HTML CSS JS REACT ANGULAR PHP',
-        couleur: '#5fa5fa',
-      },
-    ];
-  }
+  @Input() cartes?: Carte[];
+  @Input() select?: number;
+  @Output() onSelectEvent: EventEmitter<any> = new EventEmitter();
+  constructor() {}
 
   ngOnInit(): void {}
 
   onSelect(i: number) {
-    this.select = i;
-
-    console.log(this.select);
+    this.onSelectEvent.emit(i);
   }
 }

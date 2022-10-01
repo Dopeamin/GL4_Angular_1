@@ -1,0 +1,10 @@
+<div class="flex flex-row w-[100vw] gap-10 items-start">
+  <app-cv-list
+    [cartes]="cartes"
+    [select]="select"
+    (onSelectEvent)="onSelect($event)"
+  ></app-cv-list>
+  <div class="flex-3" *ngIf="select !== undefined">
+    <app-carte-visite [carte]="cartes[select!]"></app-carte-visite>
+  </div>
+</div>
