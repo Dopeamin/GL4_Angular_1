@@ -15,7 +15,7 @@
         class="relative rounded-full w-24 h-24 bg-white shadow overflow-hidden"
       >
         <img
-          [src]="'assets/' + carte!.image"
+          [src]="'assets/' + (carte!.image | defaultImage)"
           class="contain w-full h-full shadow-lg"
         />
       </div>

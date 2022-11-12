@@ -10,6 +10,7 @@ import { FormComponent } from './carte-visite/form/form.component';
 import { CvListComponent } from './cv-list/cv-list.component';
 import { CvComponent } from './cv/cv.component';
 import { ElementComponent } from './cv-list/element/element.component';
+import { DefaultImage } from './default-image/default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ElementComponent } from './cv-list/element/element.component';
     CvListComponent,
     CvComponent,
     ElementComponent,
+    DefaultImage,
   ],
   imports: [
     BrowserModule,
