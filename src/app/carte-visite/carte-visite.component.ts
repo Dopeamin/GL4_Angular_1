@@ -1,10 +1,13 @@
 import {
   Component,
+  EventEmitter,
   Input,
   OnChanges,
   OnInit,
+  Output,
   SimpleChanges,
 } from '@angular/core';
+import { EmbaucheService } from '../cv-list/embauche.service';
 import { Carte } from './carte/carte.model';
 
 @Component({
@@ -15,7 +18,10 @@ import { Carte } from './carte/carte.model';
 export class CarteVisiteComponent implements OnInit {
   public clicked: boolean;
   @Input() carte: Carte;
-  constructor() {
+  @Input() id?: number;
+
+  @Output() embauche: EventEmitter<any> = new EventEmitter();
+  constructor(private service: EmbaucheService) {
     this.clicked = false;
     this.carte = {
       nom: 'Hamdouni',
@@ -37,5 +43,10 @@ export class CarteVisiteComponent implements OnInit {
 
   onClickEvent(color: string) {
     this.carte.couleur = color;
+  }
+
+  onEmbauche() {
+    if (this.id || this.id === 0) this.service.setEmbauched(this.id);
+    this.embauche.emit();
   }
 }

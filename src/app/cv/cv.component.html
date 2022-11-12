@@ -5,6 +5,16 @@
     (onSelectEvent)="onSelect($event)"
   ></app-cv-list>
   <div class="flex-3" *ngIf="select !== undefined">
-    <app-carte-visite [carte]="cartes[select!]"></app-carte-visite>
+    <app-carte-visite
+      [carte]="cartes[select!]"
+      [id]="select"
+      (embauche)="fetch()"
+    ></app-carte-visite>
   </div>
 </div>
+<h1 class="m-10">Listes des Embauchés</h1>
+<app-cv-list
+  [cartes]="embauched"
+  [select]="select"
+  (onSelectEvent)="onSelect($event)"
+></app-cv-list>

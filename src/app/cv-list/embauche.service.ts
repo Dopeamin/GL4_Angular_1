@@ -13,5 +13,10 @@ export class EmbaucheService {
 
   setEmbauched(i: number) {
     this.cvService.setCv({ ...this.cvService.getCvs()[i], embauche: true }, i);
+    console.log(this.cvService.getCvs());
+  }
+
+  isEmbauched(i: number) {
+    return this.cvService.getCvs()[i].embauche;
   }
 }
