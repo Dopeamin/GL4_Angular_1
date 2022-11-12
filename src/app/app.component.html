@@ -16,10 +16,11 @@
   </div>
 
   <textarea
-    class="w-full max-w-[1000px] min-h-[400px] shadow rounded-xl p-10"
+    appHighlight
+    class="w-full max-w-[1000px] min-h-[400px] shadow rounded-xl p-10 border"
     placeholder="Write here"
     [ngStyle]="{
-      'color': color,
+      color: color,
       'font-size': size + 'px',
       'font-family': font
     }"
