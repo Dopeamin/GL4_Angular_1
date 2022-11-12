@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'GL4_Angular_1';
+  font = 'arial';
+  size = 16;
+  color = "black"
 }
