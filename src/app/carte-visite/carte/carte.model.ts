@@ -7,4 +7,5 @@ export interface Carte {
   citation: string;
   description: string;
   keys: string;
+  embauche: boolean;
 }

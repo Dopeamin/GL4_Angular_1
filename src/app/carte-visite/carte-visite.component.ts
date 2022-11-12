@@ -35,6 +35,7 @@ export class CarteVisiteComponent implements OnInit {
       description: 'I build web applications for fun',
       keys: 'HTML CSS JS REACT ANGULAR PHP',
       couleur: '#5fa5fa',
+      embauche: false,
     };
   }
 

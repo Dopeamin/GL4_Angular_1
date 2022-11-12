@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Carte } from '../carte-visite/carte/carte.model';
 
 @Injectable({
   providedIn: 'root',
@@ -30,11 +31,11 @@ export class CvService {
   ];
   constructor() {}
 
-  getCvs() {
+  getCvs(): Carte[] {
     return this.cvs;
   }
 
-  setCv(cv: any, i: number) {
+  setCv(cv: Carte, i: number) {
     this.cvs[i] = cv;
   }
 }

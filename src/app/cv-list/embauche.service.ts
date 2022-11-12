@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { Carte } from '../carte-visite/carte/carte.model';
 import { CvService } from './cv-service.service';
 
 @Injectable({
@@ -11,7 +12,7 @@ export class EmbaucheService {
     private toastSerivce: ToastrService
   ) {}
 
-  getEmbauchedCvs() {
+  getEmbauchedCvs() : Carte[]{
     return this.cvService.getCvs().filter((cv) => cv.embauche);
   }
 
