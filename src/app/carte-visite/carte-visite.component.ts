@@ -7,6 +7,7 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { EmbaucheService } from '../cv-list/embauche.service';
 import { Carte } from './carte/carte.model';
 
@@ -21,7 +22,9 @@ export class CarteVisiteComponent implements OnInit {
   @Input() id?: number;
 
   @Output() embauche: EventEmitter<any> = new EventEmitter();
-  constructor(private service: EmbaucheService) {
+  constructor(
+    private service: EmbaucheService,
+  ) {
     this.clicked = false;
     this.carte = {
       nom: 'Hamdouni',

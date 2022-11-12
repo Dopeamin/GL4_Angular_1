@@ -123,10 +123,10 @@
     ora "5.4.1"
     rxjs "6.6.7"
 
-"@angular/animations@^14.2.0":
-  version "14.2.4"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-14.2.4.tgz#ea06889b7d84d94add4fcdc46401f4a7de8339ca"
-  integrity sha512-c7uhSayAKQQjaLEGHAg8i0170qj6pixQmG0ox/fJJ0Esz3bb1IZcAUO9JSXSykpUBFV7Dm8pmorji4w3VvN4gQ==
+"@angular/animations@^14.2.10":
+  version "14.2.10"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-14.2.10.tgz#d9f5abf4b051a6de0e2665b659b89f5b26fa6a76"
+  integrity sha512-t3ntvZvEI3lFrsJOC2qcF4ZCD04rVXWt8769YfearACBMsAXF0OAsLFcFHSDxcJelLGvQlXtBhjhe4IFAnQiZw==
   dependencies:
     tslib "^2.3.0"
 
@@ -4387,6 +4387,18 @@ ng-heroicon@^2.1.0:
   integrity sha512-M9U2ee+80hVg452eQEjF7AJIa2v78YkA5l/Zozq/eDFYJzo6/R84P+m0tPU6zmuJkh0gB9iSN15s96eTsVkugw==
   dependencies:
     tslib "^2.0.0"
+
+ngx-toaster@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ngx-toaster/-/ngx-toaster-1.0.1.tgz#ee54f83bcbe3da26210097baac08445952899515"
+  integrity sha512-2XxTCT7+EWffb8wDpMLiFhwwZJ4B36Y1RM4m3rgG2cCt/8edsj3UzvqZjapF5wKwB+Jz8lVuVYJ94Hztcj83Cg==
+
+ngx-toastr@^15.2.1:
+  version "15.2.1"
+  resolved "https://registry.yarnpkg.com/ngx-toastr/-/ngx-toastr-15.2.1.tgz#011100db480c48107a9424296f267cbe26ac7b1e"
+  integrity sha512-Fyik8+sTbmX4NftVWWd3SIaeH8qlRU0emAfpey/AXsXuUEXgOOXKKnVPLmMAK7XL7xLy0c/+UsYBwlPK4TJcmA==
+  dependencies:
+    tslib "^2.3.0"
 
 nice-napi@^1.0.2:
   version "1.0.2"

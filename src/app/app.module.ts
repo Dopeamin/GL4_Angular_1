@@ -11,6 +11,8 @@ import { CvListComponent } from './cv-list/cv-list.component';
 import { CvComponent } from './cv/cv.component';
 import { ElementComponent } from './cv-list/element/element.component';
 import { DefaultImage } from './default-image/default-image.pipe';
+import { ToastNoAnimationModule, ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { DefaultImage } from './default-image/default-image.pipe';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     HeroIconModule.forRoot(
       {
         ...allIcons,
