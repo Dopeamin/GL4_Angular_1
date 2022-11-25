@@ -1,0 +1,28 @@
+<div
+  class="flex flex-col w-full min-h-[100vh] justify-center items-center gap-4"
+>
+  <h1 class="text-left w-full max-w-[1000px] text-4xl">Test</h1>
+
+  <div
+    class="flex md:flex-row flex-col gap-4 justify-between items-stretch w-full max-w-[1000px]"
+  >
+    <input class="flex-1" type="color" [(ngModel)]="color" />
+    <input class="flex-1" type="number" [(ngModel)]="size" />
+    <select class="flex-1" [(ngModel)]="font">
+      <option default value="arial">Arial</option>
+      <option value="helvetic">Helvetic</option>
+      <option value="verdana">Verdana</option>
+    </select>
+  </div>
+
+  <textarea
+    appHighlight
+    class="w-full max-w-[1000px] min-h-[400px] shadow rounded-xl p-10 border"
+    placeholder="Write here"
+    [ngStyle]="{
+      color: color,
+      'font-size': size + 'px',
+      'font-family': font
+    }"
+  ></textarea>
+</div>

@@ -12,7 +12,10 @@ import { CvComponent } from './cv/cv.component';
 import { ElementComponent } from './cv-list/element/element.component';
 import { DefaultImage } from './default-image/default-image.pipe';
 import { ToastNoAnimationModule, ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { ColorComponent } from './color/color.component';
+import { HighlightDirective } from './color/highlight.directive'
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     CvComponent,
     ElementComponent,
     DefaultImage,
+    ColorComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
       }
     ),
     FormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
