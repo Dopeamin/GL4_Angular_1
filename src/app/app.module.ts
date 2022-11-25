@@ -15,7 +15,8 @@ import { ToastNoAnimationModule, ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { ColorComponent } from './color/color.component';
-import { HighlightDirective } from './color/highlight.directive'
+import { HighlightDirective } from './color/highlight.directive';
+import { HeaderComponent } from './_shared/header/header.component'
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HighlightDirective } from './color/highlight.directive'
     DefaultImage,
     ColorComponent,
     HighlightDirective,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
