@@ -1,0 +1,43 @@
+<div class="w-screen max-w-[600px] flex flex-col mx-auto">
+  <form [formGroup]="authForm">
+    <label>Email : </label>
+    <input
+      type="text"
+      id="email"
+      class="bg-gray-200 py-2 px-4 w-full mt-2"
+      formControlName="email"
+      placeholder="email"
+      required
+    />
+
+    <div
+      *ngIf="email.invalid && (email.dirty || email.touched)"
+      class="text-red-300"
+    >
+      <div *ngIf="email.errors?.['required']">Email is required.</div>
+    </div>
+
+    <label class="mt-10">Password : </label>
+    <input
+      type="password"
+      id="password"
+      class="bg-gray-200 py-2 px-4 w-full mt-2"
+      formControlName="password"
+      placeholder="password"
+      required
+    />
+
+    <div
+      *ngIf="password.invalid && (password.dirty || password.touched)"
+      class="text-red-300"
+    >
+      <div *ngIf="password.errors?.['required']">Password is required.</div>
+      <div *ngIf="password.errors?.['minlength']">
+        Password must be at least 4 characters long.
+      </div>
+    </div>
+    <button type="submit" class="bg-green-400 shadow py-2 px-2 rounded mt-4">
+        Envoyer
+    </button>
+  </form>
+</div>

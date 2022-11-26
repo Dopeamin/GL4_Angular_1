@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { allIcons, HeroIconModule } from 'ng-heroicon';
 
@@ -18,7 +18,8 @@ import { ColorComponent } from './color/color.component';
 import { HighlightDirective } from './color/highlight.directive';
 import { HeaderComponent } from './_shared/header/header.component';
 import { RouterSimulator } from './_shared/router-simulator/router-simulator.component';
-import { CvDetailsComponent } from './cv/cv-details/cv-details.component'
+import { CvDetailsComponent } from './cv/cv-details/cv-details.component';
+import { InputComponent } from './form/input/input.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CvDetailsComponent } from './cv/cv-details/cv-details.component'
     HeaderComponent,
     RouterSimulator,
     CvDetailsComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,8 +51,9 @@ import { CvDetailsComponent } from './cv/cv-details/cv-details.component'
         attachDefaultDimensionsIfNoneFound: true, // default 'false'
       }
     ),
-    FormsModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
