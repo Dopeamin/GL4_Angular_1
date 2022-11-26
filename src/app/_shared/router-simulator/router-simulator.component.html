@@ -1,5 +1,5 @@
-<div class="">
-  <select class="" (change)="onChange($event)" [(ngModel)]="selected">
+<div class="my-10">
+  <select class="py-1 px-2" (change)="onChange($event)" [(ngModel)]="selected">
     <option *ngFor="let route of routes" value="{{ route.path }}">
       {{ route.label }}
     </option>

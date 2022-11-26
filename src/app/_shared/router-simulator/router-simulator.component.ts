@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { NavigationEnd, Route, Router } from '@angular/router';
 import { ROUTES, ROUTESLABELS } from '../constants';
 
 @Component({
@@ -12,7 +12,12 @@ export class RouterSimulator implements OnInit {
   selected: string;
   constructor(private router: Router) {
     this.routes = ROUTESLABELS;
+
     this.selected = this.router.url.replace('/', '');
+    router.events.subscribe((routeEvent) => {
+      if (routeEvent instanceof NavigationEnd)
+        this.selected = routeEvent.url.replace('/', '');
+    });
   }
 
   ngOnInit(): void {}
