@@ -16,7 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { ColorComponent } from './color/color.component';
 import { HighlightDirective } from './color/highlight.directive';
-import { HeaderComponent } from './_shared/header/header.component'
+import { HeaderComponent } from './_shared/header/header.component';
+import { RouterSimulator } from './_shared/router-simulator/router-simulator.component'
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HeaderComponent } from './_shared/header/header.component'
     ColorComponent,
     HighlightDirective,
     HeaderComponent,
+    RouterSimulator,
   ],
   imports: [
     BrowserModule,
