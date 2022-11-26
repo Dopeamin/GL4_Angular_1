@@ -17,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ColorComponent } from './color/color.component';
 import { HighlightDirective } from './color/highlight.directive';
 import { HeaderComponent } from './_shared/header/header.component';
-import { RouterSimulator } from './_shared/router-simulator/router-simulator.component'
+import { RouterSimulator } from './_shared/router-simulator/router-simulator.component';
+import { CvDetailsComponent } from './cv/cv-details/cv-details.component'
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { RouterSimulator } from './_shared/router-simulator/router-simulator.com
     HighlightDirective,
     HeaderComponent,
     RouterSimulator,
+    CvDetailsComponent,
   ],
   imports: [
     BrowserModule,

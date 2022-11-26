@@ -7,6 +7,7 @@ import { Carte } from '../carte-visite/carte/carte.model';
 export class CvService {
   private cvs = [
     {
+      id: 1,
       nom: 'Hamdouni',
       prenom: 'Mohamed Amine',
       job: 'Software Engineer',
@@ -18,6 +19,7 @@ export class CvService {
       embauche: false,
     },
     {
+      id: 2,
       nom: 'Hamdouni',
       prenom: 'Mohamed Amine 2',
       job: 'Software Engineer',
@@ -37,5 +39,10 @@ export class CvService {
 
   setCv(cv: Carte, i: number) {
     this.cvs[i] = cv;
+  }
+
+  removeCv(cv: Carte) {
+    const index = this.cvs.findIndex((element) => cv.id === element.id);
+    this.cvs.splice(index, 1);
   }
 }

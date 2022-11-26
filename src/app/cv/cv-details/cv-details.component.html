@@ -1,0 +1,31 @@
+<div class="flex flex-row w-screen max-w-[900px] gap-10 mx-auto">
+  <app-cv-list [cartes]="cartes"></app-cv-list>
+
+  <div
+    class="bg-white shadow flex-1 p-10 text-xl font-semibold gap-4 flex flex-col"
+  >
+    <div
+      class="relative rounded-full w-10 h-10 bg-white shadow overflow-hidden"
+    >
+      <img
+        [src]="'assets/' + (cv?.image | defaultImage)"
+        class="contain w-full h-full shadow-lg"
+      />
+    </div>
+
+    <h1>Nom: {{ cv?.nom }}</h1>
+
+    <h1>Prenom: {{ cv?.prenom }}</h1>
+
+    <h1>Job: {{ cv?.job }}</h1>
+
+    <div class="flex flex-row">
+      <div
+        class="px-4 cursor-pointer transition-all hover:-translate-y-1 hover:shadow-lg ease-out duration-500 py-2 bg-red-400 rounded text-xs text-white"
+        (click)="deleteCv()"
+      >
+        Delete Cv
+      </div>
+    </div>
+  </div>
+</div>

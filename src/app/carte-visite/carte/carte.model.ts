@@ -1,4 +1,5 @@
 export interface Carte {
+  id: number;
   nom: string;
   prenom: string;
   job: string;

@@ -7,6 +7,7 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { EmbaucheService } from '../cv-list/embauche.service';
 import { Carte } from './carte/carte.model';
@@ -22,11 +23,10 @@ export class CarteVisiteComponent implements OnInit {
   @Input() id?: number;
 
   @Output() embauche: EventEmitter<any> = new EventEmitter();
-  constructor(
-    private service: EmbaucheService,
-  ) {
+  constructor(private service: EmbaucheService, private router: Router) {
     this.clicked = false;
     this.carte = {
+      id: 1,
       nom: 'Hamdouni',
       prenom: 'Mohamed Amine',
       job: 'Software Engineer',
@@ -52,5 +52,9 @@ export class CarteVisiteComponent implements OnInit {
   onEmbauche() {
     if (this.id || this.id === 0) this.service.setEmbauched(this.id);
     this.embauche.emit();
+  }
+
+  onDetails() {
+    this.router.navigateByUrl(`/cv/details/${this.carte.id}`);
   }
 }

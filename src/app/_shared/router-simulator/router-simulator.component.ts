@@ -23,7 +23,6 @@ export class RouterSimulator implements OnInit {
   ngOnInit(): void {}
 
   onChange($event: any) {
-    console.log(this.selected);
     this.router.navigateByUrl(this.selected);
   }
 }
