@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { EmbaucheService } from 'src/app/cv-list/embauche.service';
+import { imageObservable$ } from 'src/app/_shared/image.observable';
 import { Carte } from './carte.model';
 
 @Component({
@@ -17,7 +18,13 @@ export class CarteComponent implements OnInit {
     this.hovered = false;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    imageObservable$.subscribe({
+      next: (value) => {
+        this.carte!.image = value as string;
+      },
+    });
+  }
 
   onMouseEnter() {
     this.hovered = true;
