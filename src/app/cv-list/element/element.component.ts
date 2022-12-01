@@ -9,13 +9,8 @@ import { Carte } from 'src/app/carte-visite/carte/carte.model';
 export class ElementComponent implements OnInit {
   @Input() data?: Carte;
   @Input() selected?: boolean;
-  @Output() onSelectEvent: EventEmitter<any> = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  onSelect() {
-    this.onSelectEvent.emit();
-  }
 }
