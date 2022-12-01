@@ -1,5 +1,5 @@
 <div class="w-screen max-w-[600px] flex flex-col mx-auto">
-  <form>
+  <form [formGroup]="authForm">
     <label>Email : </label>
     <input
       type="text"
@@ -11,10 +11,10 @@
     />
 
     <div
-      *ngIf="email.invalid && (email.dirty || email.touched)"
+      *ngIf="emailData?.invalid && (emailData?.dirty || emailData?.touched)"
       class="text-red-300"
     >
-      <div *ngIf="email.errors?.['required']">Email is required.</div>
+      <div *ngIf="emailData?.errors?.['required']">Email is required.</div>
     </div>
 
     <label class="mt-10">Password : </label>
@@ -28,16 +28,20 @@
     />
 
     <div
-      *ngIf="password.invalid && (password.dirty || password.touched)"
+      *ngIf="
+        passwordData?.invalid && (passwordData?.dirty || passwordData?.touched)
+      "
       class="text-red-300"
     >
-      <div *ngIf="password.errors?.['required']">Password is required.</div>
-      <div *ngIf="password.errors?.['minlength']">
+      <div *ngIf="passwordData?.errors?.['required']">
+        Password is required.
+      </div>
+      <div *ngIf="passwordData?.errors?.['minlength']">
         Password must be at least 4 characters long.
       </div>
     </div>
     <button type="submit" class="bg-green-400 shadow py-2 px-2 rounded mt-4">
-        Envoyer
+      Envoyer
     </button>
   </form>
 </div>

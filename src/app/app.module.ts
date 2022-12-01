@@ -20,6 +20,7 @@ import { HeaderComponent } from './_shared/header/header.component';
 import { RouterSimulator } from './_shared/router-simulator/router-simulator.component';
 import { CvDetailsComponent } from './cv/cv-details/cv-details.component';
 import { InputComponent } from './form/input/input.component';
+import { FormModule } from './form/form.module';
 
 @NgModule({
   declarations: [
@@ -39,8 +40,11 @@ import { InputComponent } from './form/input/input.component';
     InputComponent,
   ],
   imports: [
+    FormModule,
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     ToastrModule.forRoot(),
     HeroIconModule.forRoot(
       {
@@ -52,8 +56,6 @@ import { InputComponent } from './form/input/input.component';
       }
     ),
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

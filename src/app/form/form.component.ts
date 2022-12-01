@@ -26,10 +26,10 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {}
 
   get emailData() {
-    return this.authForm.get('name');
+    return this.authForm.get('email');
   }
 
   get passwordData() {
-    return this.authForm.get('power');
+    return this.authForm.get('password');
   }
 }
