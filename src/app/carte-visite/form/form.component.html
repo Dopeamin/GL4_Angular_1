@@ -1,33 +1,81 @@
 <form class="flex flex-col gap-4">
   <label>Nom:</label>
-  <input type="text" class="shadow-md p-3" name="nom" [(ngModel)]="carte!.nom"  />
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="nom"
+    [(ngModel)]="carte!.nom"
+  />
 
   <label>Prénom:</label>
-  <input type="text" class="shadow-md p-3" name="prenom" [(ngModel)]="carte!.prenom" />
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="prenom"
+    [(ngModel)]="carte!.prenom"
+  />
 
   <label>Job:</label>
-  <input type="text" class="shadow-md p-3" name="job" [(ngModel)]="carte!.job" />
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="job"
+    [(ngModel)]="carte!.job"
+  />
 
   <label>Image:</label>
-  <input type="text" class="shadow-md p-3" name="image" [(ngModel)]="carte!.image" />
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="image"
+    [(ngModel)]="carte!.image"
+  />
 
   <label>Citation Favorite:</label>
-  <input type="text" class="shadow-md p-3" name="citaiton" [(ngModel)]="carte!.citation" />
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="citaiton"
+    [(ngModel)]="carte!.citation"
+  />
 
   <label>Mots clé de votre travail:</label>
-  <input type="text" class="shadow-md p-3" name="keys" [(ngModel)]="carte!.keys" />
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="keys"
+    [(ngModel)]="carte!.keys"
+  />
 
   <label>Decrivez nous votre travail</label>
-  <input type="text" class="shadow-md p-3" name="description" [(ngModel)]="carte!.description" />
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="description"
+    [(ngModel)]="carte!.description"
+  />
 
   <label>Couleur du carte</label>
-  <input type="color" class="shadow-md w-full" name="couleur" [(ngModel)]="carte!.couleur" />
+  <input
+    type="color"
+    class="shadow-md w-full"
+    name="couleur"
+    [(ngModel)]="carte!.couleur"
+  />
 
   <div
-      class="w-full shadow-md rounded p-5 flex flex-row justify-start gap-5 items-center cursor-pointer bg-white mt-10 max-w-[300px] transition-all hover:shadow-xl"
-      (click)="onClick()"
-    >
-      <hero-icon [name]="'pencil'" class="w-5 h-5 text-black"></hero-icon>
-      <p>Set Favorite Color</p>
-    </div>
+    class="w-full shadow-md rounded p-5 flex flex-row justify-start gap-5 items-center cursor-pointer bg-white mt-10 max-w-[300px] transition-all hover:shadow-xl"
+    (click)="onClick()" *ngIf="!isAdd"
+  >
+    <hero-icon [name]="'pencil'" class="w-5 h-5 text-black"></hero-icon>
+    <p>Set Favorite Color</p>
+  </div>
+
+  <div
+    class="w-full shadow-md rounded p-5 flex flex-row justify-start gap-5 items-center cursor-pointer bg-white mt-10 max-w-[300px] transition-all hover:shadow-xl"
+    (click)="onAdd()" *ngIf="isAdd"
+  >
+    <hero-icon [name]="'pencil'" class="w-5 h-5 text-black"></hero-icon>
+    <p>Add</p>
+  </div>
 </form>
