@@ -32,4 +32,8 @@ export class FormComponent implements OnInit {
   get passwordData() {
     return this.authForm.get('password');
   }
+
+  validate() {
+    if (this.authForm.valid) this.authForm.reset();
+  }
 }

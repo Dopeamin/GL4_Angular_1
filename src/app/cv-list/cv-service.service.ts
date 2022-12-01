@@ -45,4 +45,8 @@ export class CvService {
     const index = this.cvs.findIndex((element) => cv.id === element.id);
     this.cvs.splice(index, 1);
   }
+
+  addCv(cv: Carte) {
+    this.cvs.push(cv);
+  }
 }
