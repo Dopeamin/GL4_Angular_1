@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Carte } from '../carte-visite/carte/carte.model';
+import { selectSubject } from '../_shared/show-details.observable';
 
 @Component({
   selector: 'app-cv-list',
@@ -9,12 +10,11 @@ import { Carte } from '../carte-visite/carte/carte.model';
 export class CvListComponent implements OnInit {
   @Input() cartes?: Carte[];
   @Input() select?: number;
-  @Output() onSelectEvent: EventEmitter<any> = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
 
   onSelect(i: number) {
-    this.onSelectEvent.emit(i);
+    selectSubject.next(i);
   }
 }

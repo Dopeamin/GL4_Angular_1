@@ -2,7 +2,6 @@
   <app-cv-list
     [cartes]="cartes"
     [select]="select"
-    (onSelectEvent)="onSelect($event)"
   ></app-cv-list>
   <div class="flex-3" *ngIf="select !== undefined">
     <app-carte-visite
@@ -16,5 +15,4 @@
 <app-cv-list
   [cartes]="embauched"
   [select]="select"
-  (onSelectEvent)="onSelect($event)"
 ></app-cv-list>

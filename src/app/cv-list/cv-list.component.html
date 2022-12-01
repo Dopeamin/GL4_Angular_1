@@ -1,9 +1,5 @@
 <div class="flex-2 flex flex-col gap-5">
-  <div *ngFor="let carte of cartes; let i = index">
-    <app-element
-      [data]="carte"
-      [selected]="select === i"
-      (onSelectEvent)="onSelect(i)"
-    ></app-element>
+  <div *ngFor="let carte of cartes; let i = index" (click)="onSelect(i)">
+    <app-element [data]="carte" [selected]="select === i"></app-element>
   </div>
 </div>
