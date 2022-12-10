@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { EmbaucheService } from 'src/app/cv-list/embauche.service';
-import { imageObservable$ } from 'src/app/_shared/image.observable';
+import { ObservableService } from 'src/app/_shared/observable.service';
 import { Carte } from './carte.model';
 
 @Component({
@@ -14,12 +13,14 @@ export class CarteComponent implements OnInit {
 
   public hovered: boolean;
 
-  constructor(private service: EmbaucheService) {
+  constructor(
+    private observableService: ObservableService
+  ) {
     this.hovered = false;
   }
 
   ngOnInit(): void {
-    imageObservable$.subscribe({
+    this.observableService.getImageObservable().subscribe({
       next: (value) => {
         this.carte!.image = value as string;
       },
